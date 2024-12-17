@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches:
+  pull:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: 'Build and Push'
+    runs-on: 'ubuntu-latest'
+
+    steps:
+      - name: Chechout source code
+        uses: actions/checkout@v4
