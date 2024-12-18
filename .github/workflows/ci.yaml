@@ -10,12 +10,19 @@ on:
 jobs:
   build:
     name: 'Build and Push'
+<<<<<<< HEAD
     runs-on: ${{ matrix.os }}
+=======
+    runs-on: 'ubuntu-latest'
+>>>>>>> origin
 
     strategy:
       matrix:
         node-version: [18, 20, 22]
+<<<<<<< HEAD
         os: [ubuntu-latest]
+=======
+>>>>>>> origin
 
     steps:
       - name: Chechout source code
@@ -33,5 +40,8 @@ jobs:
       - name: Running Tests
         run: yarn test
       
+<<<<<<< HEAD
       - name: Build Docker Imagem
         run: docker build -t aula-ci-cd:latest .
+=======
+>>>>>>> origin
